@@ -1,0 +1,861 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ZAURA Store</title>
+    <link rel="preload" as="image" href="img/banner1.jpg" fetchpriority="high">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/enhancements.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container">
+
+            <!-- Logo -->
+            <a class="navbar-brand logo" href="index.html">
+                <img src="img/logo-transparent.png" alt="ZAURA" height="58">
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarContent">
+
+                <!-- Center Menu -->
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            HOME
+                        </a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="mens.html" role="button" data-bs-toggle="dropdown">
+                            MEN
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="mens.html">Shirts</a></li>
+                            <li><a class="dropdown-item" href="mens.html">T-Shirts</a></li>
+                            <li><a class="dropdown-item" href="mens.html">Jeans</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="womens.html" data-bs-toggle="dropdown">
+                           WOMEN
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="womens.html">Kurti</a></li>
+                            <li><a class="dropdown-item" href="womens.html">T-Shirts</a></li>
+                            <li><a class="dropdown-item" href="womens.html">Tops</a></li>
+                            <li><a class="dropdown-item" href="womens.html">Pant</a></li>
+                            <li><a class="dropdown-item" href="womens.html">Short Kurti</a></li>
+
+                        </ul>
+                    </li>
+
+                   
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                            CONTACT US
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Right Icons -->
+                <div class="header-right">
+
+                    <a href="signin.html" class="signin">
+                        Sign In
+                    </a>
+
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#searchModal">
+                        <i class="bi bi-search"></i>
+                    </a>
+
+                    <a href="#" id="wishlist-icon">
+                        <i class="bi bi-heart"></i>
+                    </a>
+
+                    <a href="cart.html" class="cart-icon" id="cart-icon">
+                        <i class="bi bi-bag"></i>
+                        <span>01</span>
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <div id="bannerSlider" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#bannerSlider" data-bs-slide-to="0" class="active"></button>
+
+            <button type="button" data-bs-target="#bannerSlider" data-bs-slide-to="1"></button>
+
+            <button type="button" data-bs-target="#bannerSlider" data-bs-slide-to="2"></button>
+        </div>
+
+        <!-- Slides -->
+        <div class="carousel-inner">
+
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <img src="img/banner1.jpg" class="d-block w-100" alt="Banner 1">
+
+                <div class="carousel-caption custom-caption">
+
+                    <h1 data-aos="fade-right" data-aos-delay="200">
+                        Discover Your Fashion Style
+                    </h1>
+
+                    <p data-aos="fade-right" data-aos-delay="400">
+                        Upgrade your wardrobe with premium fashion collections
+
+                    </p>
+
+                    <!--div class="banner-btns">
+
+                        <a href="#" class="shop-btn" data-aos="zoom-in" data-aos-delay="600">
+                            Shop Now
+                        </a>
+
+                        <a href="#" class="explore-btn" data-aos="zoom-in" data-aos-delay="700">
+                            Explore More
+                        </a>
+
+                    </div-->
+
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <img src="img/banner2.jpg" class="d-block w-100" alt="Banner 2" loading="lazy" decoding="async">
+
+                <div class="carousel-caption custom-caption">
+
+                    <h1>
+                        New Trend Collection
+                    </h1>
+
+                    <p>
+                        Experience premium quality fashion with modern elegance
+                    </p>
+
+                 
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+                <img src="img/banner3.jpg" class="d-block w-100" alt="Banner 3" loading="lazy" decoding="async">
+
+                <div class="carousel-caption custom-caption">
+
+                    <h1>
+                        Fashion For Every Season
+                    </h1>
+
+                    <p>
+                        Find your perfect style with our latest collections
+                    </p>
+
+                  
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#bannerSlider" data-bs-slide="prev">
+
+            <span class="carousel-control-prev-icon"></span>
+
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#bannerSlider" data-bs-slide="next">
+
+            <span class="carousel-control-next-icon"></span>
+
+        </button>
+
+    </div>
+
+    <section class="sound-section">
+        <div class="content">
+            <h1>WE BELIEVE <br> POWER OF SOUND</h1>
+            <p>
+                We are more than just an audio equipment retailer. We represent the grandeur
+                of sound in its finest manifestations. Our mission is to cater to audiophiles
+                and those who simply appreciate quality sound.
+            </p>
+        </div>
+    </section>
+
+    <section class="category-section">
+        <a href="#">
+            <div class="category-box">
+                <img src="img/category-1.jpg" alt="Shirt" loading="lazy" decoding="async">
+                <div class="category-content">
+                    <h2>SHIRT</h2>
+                    <p>collections</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="#">
+            <div class="category-box">
+                <img src="img/category-2.jpg" alt="T-Shirt" loading="lazy" decoding="async">
+                <div class="category-content">
+                    <h2>T-SHIRT</h2>
+                    <p>collections</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="#">
+            <div class="category-box">
+                <img src="img/category-3.jpg" alt="Bottom Wear" loading="lazy" decoding="async">
+                <div class="category-content">
+                    <h2>BOTTOM WEAR</h2>
+                    <p>collections</p>
+                </div>
+            </div>
+        </a>
+
+    </section>
+
+    <section class="look py-5 mt-5">
+        <div class="container">
+            <header class="text-center mb-5">
+                <h1 class="fw-bold display-4">
+                    CREATE YOUR PERFECT LOOK
+                </h1>
+                <p>Follow the most popular trends and get exclusive items from shop</p>
+            </header>
+            <div class="row g-4">
+
+                <div class="col-lg-4">
+                    <aside class="side-banner position-relative overflow-hidden h-100">
+                        <img src="img/side-banner.JPG.jpg" class="img-fluid w-100 h-100 object-fit-cover"
+                            alt="Street Style" loading="lazy" decoding="async">
+
+                        <div class="side-banner-content position-absolute bottom-0 start-0 p-4 text-white">
+                            <span class="small">STREET STYLE</span>
+                            <h2 class="fw-bold display-6">SS-2024 LOOKBOOK</h2>
+                            <a href="#" class="btn btn-outline-light btn-sm mt-2">
+                                SHOP NOW ↗
+                            </a>
+                        </div>
+                    </aside>
+                </div>
+
+                <div class="col-lg-8">
+                    <div class="row g-4">
+                        <div class="col-lg-4 col-md-6">
+                            <article class="product-card">
+                                <a href="#">
+                                    <img src="img/product-35-1.jpg" class="img-fluid w-100" alt="Shirt" loading="lazy" decoding="async">
+                                    <div class="pt-2">
+                                        <small class="text-muted">Jackets</small>
+                                        <h6 class="fw-bold">Collarless Shirt</h6>
+                                        <p class="mb-0">
+                                            <del class="text-muted">RS.1500</del>
+                                            <strong>RS.1000</strong>
+                                        </p>
+                                    </div>
+                                </a>
+                            </article>
+                        </div>
+                        <!-- Product -->
+                        <div class="col-lg-4 col-md-6">
+                            <article class="product-card">
+                                <a href="#">
+                                    <img src="img/product-34-1.jpg" class="img-fluid w-100" alt="Shirt" loading="lazy" decoding="async">
+                                    <div class="pt-2">
+                                        <small class="text-muted">Jackets</small>
+                                        <h6 class="fw-bold">Collarless Shirt</h6>
+                                        <p class="mb-0">
+                                            <del class="text-muted">RS.1500</del>
+                                            <strong>RS.1000</strong>
+                                        </p>
+                                    </div>
+                                </a>
+                            </article>
+                        </div>
+
+                        <!-- Product -->
+                        <div class="col-lg-4 col-md-6">
+                            <article class="product-card">
+                                <a href="#">
+                                    <img src="img/product-30-3.jpg" class="img-fluid w-100" alt="Shirt" loading="lazy" decoding="async">
+                                    <div class="pt-2">
+                                        <small class="text-muted">Jackets</small>
+                                        <h6 class="fw-bold">Collarless Shirt</h6>
+                                        <p class="mb-0">
+                                            <del class="text-muted">RS.1500</del>
+                                            <strong>RS.1000</strong>
+                                        </p>
+                                    </div>
+                                </a>
+                            </article>
+                        </div>
+
+                        <!-- Product -->
+                        <div class="col-lg-4 col-md-6">
+                            <article class="product-card">
+                                <a href="#">
+                                    <img src="img/product-35-1.jpg" class="img-fluid w-100" alt="Shirt" loading="lazy" decoding="async">
+                                    <div class="pt-2">
+                                        <small class="text-muted">Jackets</small>
+                                        <h6 class="fw-bold">Collarless Shirt</h6>
+                                        <p class="mb-0">
+                                            <del class="text-muted">RS.1500</del>
+                                            <strong>RS.1000</strong>
+                                        </p>
+                                    </div>
+                                </a>
+                            </article>
+                        </div>
+
+                        <!-- Product -->
+                        <div class="col-lg-4 col-md-6">
+                            <article class="product-card">
+                                <a href="">
+                                    <img src="img/product-34-1.jpg" class="img-fluid w-100" alt="Shirt" loading="lazy" decoding="async">
+                                    <div class="pt-2">
+                                        <small class="text-muted">Jackets</small>
+                                        <h6 class="fw-bold">Collarless Shirt</h6>
+                                        <p class="mb-0">
+                                            <del class="text-muted">RS.1500</del>
+                                            <strong>RS.1000</strong>
+                                        </p>
+                                    </div>
+                                </a>
+                            </article>
+                        </div>
+
+                        <!-- Product -->
+                        <div class="col-lg-4 col-md-6">
+                            <article class="product-card">
+                                <a href="">
+                                    <img src="img/product-30-3.jpg" class="img-fluid w-100" alt="Shirt" loading="lazy" decoding="async">
+                                    <div class="pt-2">
+                                        <small class="text-muted">Jackets</small>
+                                        <h6 class="fw-bold">Collarless Shirt</h6>
+                                        <p class="mb-0">
+                                            <del class="text-muted">RS.1500</del>
+                                            <strong>RS.1000</strong>
+                                        </p>
+                                    </div>
+                                </a>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="promo-section mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="promo-wrapper">
+
+                    <!-- Left Image -->
+                    <article class="promo-box">
+                        <a href="#"> <img src="img/offer-1.jpg" alt="Fashion Sale Banner" loading="lazy" decoding="async"></a>
+                    </article>
+
+                    <!-- Right Image -->
+                    <article class="promo-box">
+                        <a href="#"><img src="img/offer-2.jpg" alt="Online Order Offer Banner" loading="lazy" decoding="async"></a>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="arrivals">
+
+        <!-- Header -->
+        <header class="arrivals-header">
+
+            <div class="arrivals-title">
+                <h2>NEW ARRIVALS</h2>
+                <p>T-Shirts</p>
+            </div>
+
+            <a href="#" class="shop-more">Shop more »</a>
+
+        </header>
+
+        <!-- Products -->
+        <div class="product-grid">
+
+            <article class="product-card">
+                <a href="">
+                    <img src="img/t-shirt1.png" alt="" loading="lazy" decoding="async">
+                    <div class="product-info">
+                        <span>T-Shirts</span>
+                        <h3>Collarless Shirt</h3>
+                        <p class="price">
+                            <span class="old">RS.1500.00</span>
+                            <span class="new">RS.1000.00</span>
+                        </p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="product-card">
+                <a href="">
+                    <img src="img/t-shirt2.png" alt="" loading="lazy" decoding="async">
+                    <div class="product-info">
+                        <span>T-Shirts</span>
+                        <h3>Collarless Shirt</h3>
+                        <p class="price">
+                            <span class="old">RS.1500.00</span>
+                            <span class="new">RS.1000.00</span>
+                        </p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="product-card">
+                <a href="">
+                    <img src="img/t-shirt3.png" alt="" loading="lazy" decoding="async">
+                    <div class="product-info">
+                        <span>T-Shirts</span>
+                        <h3>Collarless Shirt</h3>
+                        <p class="price">
+                            <span class="old">RS.1500.00</span>
+                            <span class="new">RS.1000.00</span>
+                        </p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="product-card">
+                <a href="">
+                    <img src="img/t-shirt1.png" alt="" loading="lazy" decoding="async">
+                    <div class="product-info">
+                        <span>T-Shirts</span>
+                        <h3>Collarless Shirt</h3>
+                        <p class="price">
+                            <span class="old">RS.1500.00</span>
+                            <span class="new">RS.1000.00</span>
+                        </p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="product-card">
+                <a href="">
+                    <img src="img/t-shirt3.png" alt="" loading="lazy" decoding="async">
+                    <div class="product-info">
+                        <span>T-Shirts</span>
+                        <h3>Collarless Shirt</h3>
+                        <p class="price">
+                            <span class="old">RS.1500.00</span>
+                            <span class="new">RS.1000.00</span>
+                        </p>
+                    </div>
+                </a>
+            </article>
+
+        </div>
+
+    </section>
+    <section class="arrivals">
+
+        <!-- Header -->
+        <header class="arrivals-header">
+
+            <div class="arrivals-title">
+                <h2>NEW ARRIVALS</h2>
+                <p>T-Shirts</p>
+            </div>
+
+            <a href="#" class="shop-more">Shop more »</a>
+
+        </header>
+
+        <!-- Products -->
+        <div class="product-grid">
+
+
+            <article class="product-card">
+                <a href="">
+                    <img src="img/t-shirt1.png" alt="" loading="lazy" decoding="async">
+                    <div class="product-info">
+                        <span>T-Shirts</span>
+                        <h3>Collarless Shirt</h3>
+                        <p class="price">
+                            <span class="old">RS.1500.00</span>
+                            <span class="new">RS.1000.00</span>
+                        </p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="product-card">
+                <a href="">
+                    <img src="img/t-shirt2.png" alt="" loading="lazy" decoding="async">
+                    <div class="product-info">
+                        <span>T-Shirts</span>
+                        <h3>Collarless Shirt</h3>
+                        <p class="price">
+                            <span class="old">RS.1500.00</span>
+                            <span class="new">RS.1000.00</span>
+                        </p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="product-card">
+                <a href="">
+                    <img src="img/t-shirt3.png" alt="" loading="lazy" decoding="async">
+                    <div class="product-info">
+                        <span>T-Shirts</span>
+                        <h3>Collarless Shirt</h3>
+                        <p class="price">
+                            <span class="old">RS.1500.00</span>
+                            <span class="new">RS.1000.00</span>
+                        </p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="product-card">
+                <a href="">
+                    <img src="img/t-shirt1.png" alt="" loading="lazy" decoding="async">
+                    <div class="product-info">
+                        <span>T-Shirts</span>
+                        <h3>Collarless Shirt</h3>
+                        <p class="price">
+                            <span class="old">RS.1500.00</span>
+                            <span class="new">RS.1000.00</span>
+                        </p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="product-card">
+                <a href="">
+                    <img src="img/t-shirt3.png" alt="" loading="lazy" decoding="async">
+                    <div class="product-info">
+                        <span>T-Shirts</span>
+                        <h3>Collarless Shirt</h3>
+                        <p class="price">
+                            <span class="old">RS.1500.00</span>
+                            <span class="new">RS.1000.00</span>
+                        </p>
+                    </div>
+                </a>
+            </article>
+
+        </div>
+
+    </section>
+
+    <section class="arrivals">
+
+        <!-- Header -->
+        <header class="arrivals-header">
+
+            <div class="arrivals-title">
+                <h2>NEW ARRIVALS</h2>
+                <p>T-Shirts</p>
+            </div>
+
+            <a href="#" class="shop-more">Shop more »</a>
+
+        </header>
+
+        <!-- Products -->
+        <div class="product-grid">
+
+            <article class="product-card">
+                <a href="">
+                    <img src="img/t-shirt1.png" alt="" loading="lazy" decoding="async">
+                    <div class="product-info">
+                        <span>T-Shirts</span>
+                        <h3>Collarless Shirt</h3>
+                        <p class="price">
+                            <span class="old">RS.1500.00</span>
+                            <span class="new">RS.1000.00</span>
+                        </p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="product-card">
+                <a href="">
+                    <img src="img/t-shirt2.png" alt="" loading="lazy" decoding="async">
+                    <div class="product-info">
+                        <span>T-Shirts</span>
+                        <h3>Collarless Shirt</h3>
+                        <p class="price">
+                            <span class="old">RS.1500.00</span>
+                            <span class="new">RS.1000.00</span>
+                        </p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="product-card">
+                <a href="">
+                    <img src="img/t-shirt3.png" alt="" loading="lazy" decoding="async">
+                    <div class="product-info">
+                        <span>T-Shirts</span>
+                        <h3>Collarless Shirt</h3>
+                        <p class="price">
+                            <span class="old">RS.1500.00</span>
+                            <span class="new">RS.1000.00</span>
+                        </p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="product-card">
+                <a href="">
+                    <img src="img/t-shirt1.png" alt="" loading="lazy" decoding="async">
+                    <div class="product-info">
+                        <span>T-Shirts</span>
+                        <h3>Collarless Shirt</h3>
+                        <p class="price">
+                            <span class="old">RS.1500.00</span>
+                            <span class="new">RS.1000.00</span>
+                        </p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="product-card">
+                <a href="">
+                    <img src="img/t-shirt3.png" alt="" loading="lazy" decoding="async">
+                    <div class="product-info">
+                        <span>T-Shirts</span>
+                        <h3>Collarless Shirt</h3>
+                        <p class="price">
+                            <span class="old">RS.1500.00</span>
+                            <span class="new">RS.1000.00</span>
+                        </p>
+                    </div>
+                </a>
+            </article>
+
+        </div>
+
+    </section>
+
+    <section class="testimonial-section">
+
+        <div class="container">
+
+            <h2 class="testimonial-title">
+                Our Client Say!
+            </h2>
+
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000"
+                data-bs-wrap="true">
+
+                <div class="carousel-inner">
+
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+
+                        <div class="testimonial-box">
+
+                            <p class="testimonial-text">
+                                sunic is more than just an audio equipment retailer.
+                                We represent the grandeur of sound in its finest manifestations.
+                                Our mission is to cater to audiophiles and those who simply appreciate quality sound.
+                            </p>
+
+                            <h4 class="client-name">
+                                Alden Smith
+                            </h4>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+
+                        <div class="testimonial-box">
+
+                            <p class="testimonial-text">
+                                Amazing customer support and premium quality products.
+                                Highly recommended for modern audio lovers.
+                            </p>
+
+                            <h4 class="client-name">
+                                John Mathew
+                            </h4>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="carousel-item">
+
+                        <div class="testimonial-box">
+
+                            <p class="testimonial-text">
+                                Excellent sound systems with stylish designs and premium quality.
+                                Truly satisfied with the service.
+                            </p>
+
+                            <h4 class="client-name">
+                                Maria Thomas
+                            </h4>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Left Arrow -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
+                    data-bs-slide="prev">
+
+                    <i class="bi bi-chevron-left arrow-icon"></i>
+
+                </button>
+
+                <!-- Right Arrow -->
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
+                    data-bs-slide="next">
+
+                    <i class="bi bi-chevron-right arrow-icon"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main">
+
+                <!-- Address (left) -->
+                <div class="footer-col footer-address">
+                    <h5>Visit Us</h5>
+                    <p><i class="bi bi-geo-alt"></i><span>Anupahalli v , hoskote tq , bangalure RD<br> karnataka 562129</span></p>
+                    <p><i class="bi bi-envelope"></i><span>zaurafashions@gmail.com</span></p>
+                    <p><i class="bi bi-telephone"></i><span><a href="sms:+918660791856">+91 8660791856</a></span></p>
+                </div>
+
+                <!-- Logo (center) -->
+                <div class="footer-col footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <img src="img/logo-transparent.png" alt="ZAURA">
+                    </a>
+                    <p class="footer-tagline">Timeless fashion, crafted with care.</p>
+                </div>
+
+                <!-- Social (right) -->
+                <div class="footer-col footer-social">
+                    <h5>Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/zaurafashions?igsh=cjNtaGN1eGU1OG9i" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="https://x.com/ZAURAFASHIONS?s=20" target="_blank" rel="noopener" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">© 2026 ZAURA. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <button id="scrollTopBtn" class="scroll-top-btn">
+        <i class="bi bi-chevron-up"></i>
+    </button>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1500,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+
+    <script>
+        const btn = document.getElementById("scrollTopBtn");
+
+        // Show button when scrolling
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 150) {
+                btn.classList.add("show");
+            } else {
+                btn.classList.remove("show");
+            }
+        });
+
+        // Scroll to top smoothly
+        btn.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Search Products</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <input type="text" class="form-control" placeholder="Search products...">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/products.js"></script>
+    <script src="js/site.js"></script>
+    <script src="js/images.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+
+
+</html>
