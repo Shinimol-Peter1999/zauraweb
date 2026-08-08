@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign In | ZAURA</title>
+  <meta name="description" content="Sign in to your ZAURA account to track orders and saved items.">
+  <meta name="theme-color" content="#111111">
+  <link rel="canonical" href="signin.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sign In | ZAURA">
+  <meta property="og:description" content="Sign in to your ZAURA account to track orders and saved items.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="img/favicon-64.png" type="image/png" sizes="64x64">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+  <!-- Styles: local first so the page can paint without waiting on the network -->
+  <link rel="preload" as="font" type="font/woff2" href="css/fonts/montserrat-400.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="css/fonts/montserrat-700.woff2" crossorigin>
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/enhancements.css">
+  <link rel="stylesheet" href="css/bootstrap-icon.css">
+  <link rel="stylesheet" href="css/aos.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="css/aos.css"></noscript>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+  <nav class="navbar navbar-expand-lg custom-navbar">
+    <div class="container">
+
+      <a class="navbar-brand logo" href="index.html">
+        <img src="img/logo-transparent.png" alt="ZAURA" width="150" height="58">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+              aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">HOME</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="mens.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">MEN</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="men-shirts.html">Shirts</a></li>
+              <li><a class="dropdown-item" href="men-tshirts.html">T-Shirts</a></li>
+              <li><a class="dropdown-item" href="men-jeans.html">Jeans</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="womens.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">WOMEN</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="women-kurti.html">Kurti</a></li>
+              <li><a class="dropdown-item" href="women-tshirts.html">T-Shirts</a></li>
+              <li><a class="dropdown-item" href="women-tops.html">Tops</a></li>
+              <li><a class="dropdown-item" href="women-pants.html">Pant</a></li>
+              <li><a class="dropdown-item" href="women-short-kurti.html">Short Kurti</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">CONTACT US</a>
+          </li>
+        </ul>
+
+        <div class="header-right">
+          <a href="signin.html" class="signin">Sign In</a>
+          <a href="#" data-bs-toggle="modal" data-bs-target="#searchModal" aria-label="Search"><i class="bi bi-search"></i></a>
+          <a href="wishlist.html" id="wishlist-icon" aria-label="Wishlist"><i class="bi bi-heart"></i></a>
+          <a href="cart.html" class="cart-icon" id="cart-icon" aria-label="Cart">
+            <i class="bi bi-bag"></i>
+            <span>00</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+  <main class="auth-page">
+    <div class="auth-card">
+      <div class="auth-header">
+        <h1>Welcome back</h1>
+        <p>Sign in to continue shopping your favourites.</p>
+      </div>
+
+      <form id="signinForm" class="auth-form" novalidate>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" name="email" required autocomplete="email" placeholder="you@example.com">
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <div class="pw-wrap">
+            <input type="password" name="password" required autocomplete="current-password" placeholder="••••••••">
+            <button type="button" class="pw-toggle" aria-label="Toggle password"><i class="bi bi-eye"></i></button>
+          </div>
+        </div>
+        <div class="auth-row">
+          <label class="check"><input type="checkbox"> Remember me</label>
+          <a href="#" class="muted-link" id="forgotLink">Forgot password?</a>
+        </div>
+        <div class="auth-error" id="authError"></div>
+        <button type="submit" class="auth-btn">Sign In</button>
+        <p class="auth-alt">New to ZAURA? <a href="signup.html">Create an account</a></p>
+      </form>
+
+      <!-- Forgot password -->
+      <div class="auth-reset" id="resetPanel" hidden>
+        <h2>Reset your password</h2>
+        <p class="reset-help">Enter the email on your account. We will generate a 6-digit reset code for you.</p>
+
+        <form id="resetRequestForm" class="auth-form" novalidate>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="email" id="resetEmail" required autocomplete="email" placeholder="you@example.com">
+          </div>
+          <button type="submit" class="auth-btn">Send reset code</button>
+        </form>
+
+        <form id="resetConfirmForm" class="auth-form" novalidate hidden>
+          <div class="form-group">
+            <label>Reset code</label>
+            <input type="text" name="code" id="resetCode" inputmode="numeric" placeholder="6-digit code">
+          </div>
+          <div class="form-group">
+            <label>New password</label>
+            <input type="password" name="password" id="resetPassword" placeholder="At least 6 characters">
+          </div>
+          <button type="submit" class="auth-btn">Update password</button>
+        </form>
+
+        <div class="auth-error" id="resetError"></div>
+        <div class="auth-note" id="resetNote" hidden></div>
+        <p class="auth-alt"><a href="#" id="backToSignin">&larr; Back to sign in</a></p>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-main">
+
+        <div class="footer-col footer-address">
+          <h5>Visit Us</h5>
+          <p><i class="bi bi-geo-alt" aria-hidden="true"></i><span>Anupahalli V, Hoskote Taluk<br>Bengaluru Rural, Karnataka – 562129</span></p>
+          <p><i class="bi bi-envelope" aria-hidden="true"></i><span><a href="mailto:zaurafashions@gmail.com">zaurafashions@gmail.com</a></span></p>
+          <p><i class="bi bi-telephone" aria-hidden="true"></i><span><a href="tel:+918660791856">+91 8660791856</a></span></p>
+        </div>
+
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="footer-logo">
+            <img src="img/logo-transparent.png" alt="ZAURA" width="150" height="58" loading="lazy" decoding="async">
+          </a>
+          <p class="footer-tagline">Timeless fashion, crafted with care.</p>
+          <ul class="footer-links">
+            <li><a href="men-shirts.html">Shirts</a></li>
+            <li><a href="men-tshirts.html">T-Shirts</a></li>
+            <li><a href="men-jeans.html">Jeans</a></li>
+            <li><a href="women-kurti.html">Kurti</a></li>
+            <li><a href="women-tshirts.html">T-Shirts</a></li>
+            <li><a href="women-tops.html">Tops</a></li>
+            <li><a href="women-pants.html">Pant</a></li>
+            <li><a href="women-short-kurti.html">Short Kurti</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-social">
+          <h5>Follow Us</h5>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/zaurafashions?igsh=cjNtaGN1eGU1OG9i" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://x.com/ZAURAFASHIONS?s=20" target="_blank" rel="noopener" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+          </div>
+          <p class="footer-hours">Monday – Saturday, 10:00 AM – 7:00 PM IST</p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 ZAURA Fashions. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="scrollTopBtn" class="scroll-top-btn" type="button" aria-label="Back to top">
+    <i class="bi bi-arrow-up" aria-hidden="true"></i>
+  </button>
+
+
+
+  <div class="modal fade" id="searchModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Search Products</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body"><input type="text" class="form-control" placeholder="Search products..."></div>
+      </div>
+    </div>
+  </div>
+  <div class="zaura-toast" id="zauraToast">Added to cart</div>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/site.js"></script>
+  <script src="js/auth.js"></script>
+<script>
+    const signinForm = document.getElementById("signinForm");
+    const resetPanel = document.getElementById("resetPanel");
+    const reqForm = document.getElementById("resetRequestForm");
+    const confForm = document.getElementById("resetConfirmForm");
+    const resetError = document.getElementById("resetError");
+    const resetNote = document.getElementById("resetNote");
+
+    signinForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(this).entries());
+      const res = window.ZAURA_AUTH.signIn(data);
+      const err = document.getElementById("authError");
+      if (!res.ok) { err.textContent = res.error; return; }
+      err.textContent = "";
+      window.location.href = window.ZAURA_AUTH.nextUrl();
+    });
+
+    document.querySelector(".pw-toggle").addEventListener("click", function () {
+      const inp = this.previousElementSibling;
+      inp.type = inp.type === "password" ? "text" : "password";
+      this.querySelector("i").className = inp.type === "password" ? "bi bi-eye" : "bi bi-eye-slash";
+    });
+
+    /* ---- Forgot password ---- */
+    document.getElementById("forgotLink").addEventListener("click", function (e) {
+      e.preventDefault();
+      signinForm.hidden = true;
+      resetPanel.hidden = false;
+      const typed = signinForm.querySelector('input[name="email"]').value;
+      if (typed) document.getElementById("resetEmail").value = typed;
+      document.getElementById("resetEmail").focus();
+    });
+
+    document.getElementById("backToSignin").addEventListener("click", function (e) {
+      e.preventDefault();
+      resetPanel.hidden = true;
+      signinForm.hidden = false;
+    });
+
+    reqForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const res = window.ZAURA_AUTH.requestReset(document.getElementById("resetEmail").value);
+      if (!res.ok) { resetError.textContent = res.error; resetNote.hidden = true; return; }
+      resetError.textContent = "";
+      resetNote.hidden = false;
+      resetNote.innerHTML = "Your reset code is <strong>" + res.code +
+        "</strong> — it is valid for 15 minutes. Enter it below with your new password.";
+      confForm.hidden = false;
+      document.getElementById("resetCode").focus();
+    });
+
+    confForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const res = window.ZAURA_AUTH.resetPassword(
+        document.getElementById("resetEmail").value,
+        document.getElementById("resetCode").value,
+        document.getElementById("resetPassword").value
+      );
+      if (!res.ok) { resetError.textContent = res.error; return; }
+      resetError.textContent = "";
+      resetNote.hidden = false;
+      resetNote.textContent = "Password updated. You can sign in with your new password now.";
+      confForm.hidden = true;
+      reqForm.hidden = true;
+      setTimeout(function () {
+        resetPanel.hidden = true;
+        reqForm.hidden = false;
+        signinForm.hidden = false;
+      }, 2200);
+    });
+  </script>
+
+</body>
+</html>

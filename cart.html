@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Cart | ZAURA</title>
+  <meta name="description" content="Review the items in your ZAURA shopping bag before checkout.">
+  <meta name="theme-color" content="#111111">
+  <link rel="canonical" href="cart.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Your Cart | ZAURA">
+  <meta property="og:description" content="Review the items in your ZAURA shopping bag before checkout.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="img/favicon-64.png" type="image/png" sizes="64x64">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+  <!-- Styles: local first so the page can paint without waiting on the network -->
+  <link rel="preload" as="font" type="font/woff2" href="css/fonts/montserrat-400.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="css/fonts/montserrat-700.woff2" crossorigin>
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/enhancements.css">
+  <link rel="stylesheet" href="css/bootstrap-icon.css">
+  <link rel="stylesheet" href="css/aos.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="css/aos.css"></noscript>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+  <nav class="navbar navbar-expand-lg custom-navbar">
+    <div class="container">
+
+      <a class="navbar-brand logo" href="index.html">
+        <img src="img/logo-transparent.png" alt="ZAURA" width="150" height="58">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+              aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">HOME</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="mens.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">MEN</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="men-shirts.html">Shirts</a></li>
+              <li><a class="dropdown-item" href="men-tshirts.html">T-Shirts</a></li>
+              <li><a class="dropdown-item" href="men-jeans.html">Jeans</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="womens.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">WOMEN</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="women-kurti.html">Kurti</a></li>
+              <li><a class="dropdown-item" href="women-tshirts.html">T-Shirts</a></li>
+              <li><a class="dropdown-item" href="women-tops.html">Tops</a></li>
+              <li><a class="dropdown-item" href="women-pants.html">Pant</a></li>
+              <li><a class="dropdown-item" href="women-short-kurti.html">Short Kurti</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">CONTACT US</a>
+          </li>
+        </ul>
+
+        <div class="header-right">
+          <a href="signin.html" class="signin">Sign In</a>
+          <a href="#" data-bs-toggle="modal" data-bs-target="#searchModal" aria-label="Search"><i class="bi bi-search"></i></a>
+          <a href="wishlist.html" id="wishlist-icon" aria-label="Wishlist"><i class="bi bi-heart"></i></a>
+          <a href="cart.html" class="cart-icon" id="cart-icon" aria-label="Cart">
+            <i class="bi bi-bag"></i>
+            <span>00</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+    <section>
+        <div class="container my-5">
+            <h2 class="mb-4">Shopping Cart</h2>
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table align-middle mb-0">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>Product</th>
+                                            <th>Size</th>
+                                            <th>Price</th>
+                                            <th>Quantity</th>
+                                            <th>Total</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="cart-table-body">
+                                        </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Cart Summary</h5>
+                            <ul class="list-group list-group-flush mb-3">
+                                <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                    Subtotal
+                                    <span id="cart-subtotal">$0.00</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                    Shipping
+                                    <span>Free</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center px-0 fw-bold">
+                                    Total
+                                    <span id="cart-total">$0.00</span>
+                                </li>
+                            </ul>
+                            <a href="checkout.html" class="btn btn-primary w-100">Proceed to Checkout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-main">
+
+        <div class="footer-col footer-address">
+          <h5>Visit Us</h5>
+          <p><i class="bi bi-geo-alt" aria-hidden="true"></i><span>Anupahalli V, Hoskote Taluk<br>Bengaluru Rural, Karnataka – 562129</span></p>
+          <p><i class="bi bi-envelope" aria-hidden="true"></i><span><a href="mailto:zaurafashions@gmail.com">zaurafashions@gmail.com</a></span></p>
+          <p><i class="bi bi-telephone" aria-hidden="true"></i><span><a href="tel:+918660791856">+91 8660791856</a></span></p>
+        </div>
+
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="footer-logo">
+            <img src="img/logo-transparent.png" alt="ZAURA" width="150" height="58" loading="lazy" decoding="async">
+          </a>
+          <p class="footer-tagline">Timeless fashion, crafted with care.</p>
+          <ul class="footer-links">
+            <li><a href="men-shirts.html">Shirts</a></li>
+            <li><a href="men-tshirts.html">T-Shirts</a></li>
+            <li><a href="men-jeans.html">Jeans</a></li>
+            <li><a href="women-kurti.html">Kurti</a></li>
+            <li><a href="women-tshirts.html">T-Shirts</a></li>
+            <li><a href="women-tops.html">Tops</a></li>
+            <li><a href="women-pants.html">Pant</a></li>
+            <li><a href="women-short-kurti.html">Short Kurti</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-social">
+          <h5>Follow Us</h5>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/zaurafashions?igsh=cjNtaGN1eGU1OG9i" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://x.com/ZAURAFASHIONS?s=20" target="_blank" rel="noopener" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+          </div>
+          <p class="footer-hours">Monday – Saturday, 10:00 AM – 7:00 PM IST</p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 ZAURA Fashions. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="scrollTopBtn" class="scroll-top-btn" type="button" aria-label="Back to top">
+    <i class="bi bi-arrow-up" aria-hidden="true"></i>
+  </button>
+    <button id="scrollTopBtn" class="scroll-top-btn"><i class="bi bi-chevron-up"></i></button>
+
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Search Products</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" class="form-control" placeholder="Search products...">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+  <div class="modal fade" id="searchModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Search Products</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body"><input type="text" class="form-control" placeholder="Search products..."></div>
+      </div>
+    </div>
+  </div>
+  <div class="zaura-toast" id="zauraToast">Added to cart</div>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/site.js"></script>
+  <script src="js/auth.js"></script>
+<script>
+        AOS.init({ duration: 1500, easing: 'ease-in-out', once: true });
+    </script>
+
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            renderCart();
+
+            function renderCart() {
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                const cartTableBody = document.getElementById('cart-table-body');
+                const cartCount = document.getElementById('cart-count');
+                
+                if (cartCount) {
+                    cartCount.innerText = cart.length < 10 ? '0' + cart.length : cart.length;
+                }
+
+                cartTableBody.innerHTML = '';
+                
+                if (cart.length === 0) {
+                    cartTableBody.innerHTML = `<tr><td colspan="6" class="text-center py-4">Your cart is empty!</td></tr>`;
+                    updateSummary(0);
+                    return;
+                }
+
+                let subtotal = 0;
+
+                cart.forEach((item, index) => {
+                    const row = document.createElement('tr');
+                    const itemTotal = item.price * item.quantity;
+                    subtotal += itemTotal;
+                    row.innerHTML = `
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <img src="${item.image ? item.image : 'https://via.placeholder.com/50'}" class="rounded me-3" alt="Product" style="width: 50px; height: 50px; object-fit: cover;" loading="lazy" decoding="async">
+                                <div>
+                                    <p class="mb-0 fw-bold">${item.name}</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>${item.size}</td>
+                        <td>₹${item.price.toFixed(2)}</td>
+                        <td>
+                            <div class="input-group" style="width: 120px;">
+                                <button class="btn btn-outline-secondary btn-sm minus-btn" data-index="${index}">-</button>
+                                <input type="text" class="form-control form-control-sm text-center quantity-input" value="${item.quantity}" readonly>
+                                <button class="btn btn-outline-secondary btn-sm plus-btn" data-index="${index}">+</button>
+                            </div>
+                        </td>
+                        <td>₹${itemTotal.toFixed(2)}</td>
+                        <td>
+                            <button class="btn btn-danger btn-sm remove-item" data-index="${index}">Remove</button>
+                        </td>
+                    `;
+                    cartTableBody.appendChild(row);
+                });
+
+                updateSummary(subtotal);
+                setupEventListeners();
+            }
+
+            function updateSummary(subtotal) {
+                document.getElementById('cart-subtotal').innerText = `₹${subtotal.toFixed(2)}`;
+                document.getElementById('cart-total').innerText = `₹${subtotal.toFixed(2)}`;
+            }
+
+            function setupEventListeners() {
+                // Quantity Plus Button
+                document.querySelectorAll('.plus-btn').forEach(button => {
+                    button.addEventListener('click', (e) => {
+                        const index = e.target.getAttribute('data-index');
+                        let cart = JSON.parse(localStorage.getItem('cart'));
+                        cart[index].quantity += 1;
+                        localStorage.setItem('cart', JSON.stringify(cart));
+                        renderCart();
+                    });
+                });
+
+                // Quantity Minus Button
+                document.querySelectorAll('.minus-btn').forEach(button => {
+                    button.addEventListener('click', (e) => {
+                        const index = e.target.getAttribute('data-index');
+                        let cart = JSON.parse(localStorage.getItem('cart'));
+                        if (cart[index].quantity > 1) {
+                            cart[index].quantity -= 1;
+                            localStorage.setItem('cart', JSON.stringify(cart));
+                            renderCart();
+                        }
+                    });
+                });
+
+                // Remove Item Button
+                document.querySelectorAll('.remove-item').forEach(button => {
+                    button.addEventListener('click', (e) => {
+                        const index = e.target.getAttribute('data-index');
+                        let cart = JSON.parse(localStorage.getItem('cart'));
+                        cart.splice(index, 1);
+                        localStorage.setItem('cart', JSON.stringify(cart));
+                        renderCart();
+                    });
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
